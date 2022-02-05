@@ -1,0 +1,37 @@
+[tool.poetry]
+name = "ebooks"
+version = "0.1.0"
+description = "Tools to manage and parse ebooks"
+authors = ["Ashton Sidhu <ashton.sidhu1994@gmail.com>"]
+
+[tool.poetry.dependencies]
+python = "^3.8"
+boto3 = "^1.20.48"
+sidhulabs = "^2022.1.23"
+loguru = "^0.6.0"
+tqdm = "^4.62.3"
+EbookLib = "^0.17.1"
+bs4 = "^0.0.1"
+
+[tool.poetry.dev-dependencies]
+pytest = "^6.2.5"
+isort = "5.10.1"
+black = "21.11.b1"
+
+[tool.black]
+line-length = 120
+
+# Per https://github.com/psf/black/tree/main/docs/compatible_configs
+[tool.isort]
+ensure_newline_before_comments = true
+force_grid_wrap = 0
+include_trailing_comma = true
+line_length = 120
+multi_line_output = 3
+skip = '_opam,_build,.venv,egs_infra,services,typings,node_modules'
+skip_glob = '*/migrations/*.py,*_pb2.py'
+use_parentheses = true
+
+[build-system]
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"
