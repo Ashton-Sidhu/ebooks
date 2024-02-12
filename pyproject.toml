@@ -12,6 +12,8 @@ loguru = "^0.6.0"
 tqdm = "^4.62.3"
 EbookLib = "^0.17.1"
 bs4 = "^0.0.1"
+streamlit = "^1.7.0"
+st-annotated-text = "^3.0.0"
 
 [tool.poetry.dev-dependencies]
 pytest = "^6.2.5"
